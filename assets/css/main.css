@@ -4028,5 +4028,8 @@ input, select, textarea {
 			left: 2px;
 		}
 	}
+	.marquee__text {
+		font-family: 'Bebas Neue', sans-serif;
+	}
 	
 	
