@@ -4001,15 +4001,32 @@ input, select, textarea {
 		position: absolute;
 		top: 10px;
 		left: 10px;
-		width: 100px; /* Adjust the size as needed */
+		width: 100px; /* Default size for larger screens */
 		animation: spin 3s linear infinite;
 	}
 	
 	@keyframes spin {
 		0% { transform: rotateY(0deg); }
-		25% { transform: rotateY(90deg); }
 		50% { transform: rotateY(180deg); }
-		75% { transform: rotateY(270deg); }
 		100% { transform: rotateY(360deg); }
 	}
+	
+	/* Media query for smaller screens */
+	@media (max-width: 768px) {
+		.logo-spin {
+			width: 80px; /* Smaller size for tablets */
+			top: 5px;
+			left: 5px;
+		}
+	}
+	
+	/* Media query for very small screens */
+	@media (max-width: 480px) {
+		.logo-spin {
+			width: 60px; /* Even smaller size for phones */
+			top: 2px;
+			left: 2px;
+		}
+	}
+	
 	
