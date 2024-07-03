@@ -4013,7 +4013,7 @@ input, select, textarea {
 	
 	@media (max-width: 768px) {
 		.logo-spin {
-			width: 40px; /* Smaller size for tablets */
+			width: 80px; /* Smaller size for tablets */
 			top: 5px;
 			left: 5px;
 		}
@@ -4022,7 +4022,7 @@ input, select, textarea {
 	/* Media query for very small screens */
 	@media (max-width: 480px) {
 		.logo-spin {
-			width: 20px; /* Even smaller size for phones */
+			width: 60px; /* Even smaller size for phones */
 			top: 2px;
 			left: 2px;
 		}
