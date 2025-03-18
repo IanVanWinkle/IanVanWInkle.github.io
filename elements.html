@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coast - Pictures</title>
   <link rel="icon" type="image/x-icon" href="images/LogoNoBackground.png">
   <!-- Font Awesome & Google Font -->
@@ -41,7 +41,43 @@
   <!-- Gallery Section -->
   <div class="gallery-container">
     <div class="gallery-grid">
-      <!-- Each gallery-item includes data-category and data-caption attributes -->
+      <!-- Existing Gallery Items -->
+	  <div class="gallery-item" data-category="misc" data-caption="Adios Duo">
+        <img src="images-March-25/adiosduo.jpeg" alt="Adios Duo">
+        <div class="overlay">Adios Duo</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Adios Yellow Light">
+        <img src="images-March-25/adiosellowlight.jpeg" alt="Adios Yellow Light">
+        <div class="overlay">Adios Yellow Light</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Coast and Hack">
+        <img src="images-March-25/coastandhack.jpeg" alt="Coast and Hack">
+        <div class="overlay">Coast and Hack</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Coast Blue Background">
+        <img src="images-March-25/coastbluebackground.jpeg" alt="Coast Blue Background">
+        <div class="overlay">Coast Blue Background</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Courtyard Stage">
+        <img src="images-March-25/courtyardstage.jpeg" alt="Courtyard Stage">
+        <div class="overlay">Courtyard Stage</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Front Page Smiling">
+        <img src="images-March-25/frontpagesmiling.jpeg" alt="Front Page Smiling">
+        <div class="overlay">Front Page Smiling</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Hasta Abajo">
+        <img src="images-March-25/hastaabajo.jpeg" alt="Hasta Abajo">
+        <div class="overlay">Hasta Abajo</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Sandlot Radio">
+        <img src="images-March-25/sandlotradio.jpeg" alt="Sandlot Radio">
+        <div class="overlay">Sandlot Radio</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Vintage Market 3-23">
+        <img src="images-March-25/vintagemarket3-23.jpeg" alt="Vintage Market 3-23">
+        <div class="overlay">Vintage Market 3-23</div>
+      </div>
       <div class="gallery-item" data-category="events" data-caption="May 24 Event">
         <img src="images/May24Date.jpg" alt="May 24 Event">
         <div class="overlay">May 24 Event</div>
@@ -98,16 +134,22 @@
         <img src="images/SoundOfUnderground.jpg" alt="Sound of Underground">
         <div class="overlay">Sound of Underground</div>
       </div>
+      
+      <!-- New Gallery Items (images-March-25) -->
+      
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2025 Coast Events</p>
-    <p>
-      <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank">Instagram</a> |
-      <a href="https://soundcloud.com/aninkle" target="_blank">Soundcloud</a> |
-      <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" target="_blank">Email</a>
-    </p>
+	  <p>
+		<a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank">Instagram</a> |
+		<a href="https://soundcloud.com/aninkle" target="_blank">Soundcloud</a> |
+		<a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" target="_blank">Email</a>
+	  </p>
+	  <ul class="copyright">
+		<li>Fickling LLC &copy;</li>
+		<li>Designed By: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+		  Two midgets in a trench coat</a></li>
   </footer>
   
   <!-- Modal Lightbox -->
@@ -130,8 +172,10 @@
     backToTopButton.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    
     const filterButtons = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
+    
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
         filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -142,10 +186,12 @@
         });
       });
     });
+    
     const modal = document.getElementById('modal');
     const modalImage = document.getElementById('modalImage');
     const modalCaption = document.getElementById('modalCaption');
     const modalClose = document.getElementById('modalClose');
+    
     galleryItems.forEach(item => {
       item.addEventListener('click', () => {
         const img = item.querySelector('img');
@@ -154,6 +200,7 @@
         modal.style.display = 'flex';
       });
     });
+    
     modalClose.addEventListener('click', () => { modal.style.display = 'none'; });
     window.addEventListener('click', (e) => { if (e.target === modal) { modal.style.display = 'none'; } });
   </script>

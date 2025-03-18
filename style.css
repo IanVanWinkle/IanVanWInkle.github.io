@@ -419,7 +419,7 @@
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
-    padding: 50px 0; /* Adjust vertical padding as needed */
+    padding: 270px 0; /* Adjust vertical padding as needed */
   }
   
   /* Each button styled as a box with no background */
@@ -473,6 +473,11 @@
       margin-bottom: 20px;
     }
   }
+  .marquee__inner {
+    display: flex;
+    animation: marqueeAnimation 45s linear infinite;
+  }
+  
   
   
   
