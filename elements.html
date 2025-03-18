@@ -1,92 +1,161 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Coast - Pictures</title>
-		<link rel="icon" type="image/x-icon" href="/images/LogoNoBackground.png" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coast - Pictures</title>
+  <link rel="icon" type="image/x-icon" href="images/LogoNoBackground.png">
+  <!-- Font Awesome & Google Font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <!-- <div class="logo"><a href="index.html">Coast</a></div> -->
+      <nav id="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="generic.html">About</a></li>
+          <li><a href="elements.html">Pictures</a></li>
+          <li><a href="giglist.html">Gig List</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="events">Events</button>
+    <button class="filter-btn" data-filter="logo">Logo</button>
+    <button class="filter-btn" data-filter="art">Art</button>
+    <button class="filter-btn" data-filter="misc">Misc</button>
+  </div>
+  
+  <!-- Gallery Section -->
+  <div class="gallery-container">
+    <div class="gallery-grid">
+      <!-- Each gallery-item includes data-category and data-caption attributes -->
+      <div class="gallery-item" data-category="events" data-caption="May 24 Event">
+        <img src="images/May24Date.jpg" alt="May 24 Event">
+        <div class="overlay">May 24 Event</div>
+      </div>
+      <div class="gallery-item" data-category="logo" data-caption="Coast Logo">
+        <img src="images/LogoNoBackground.png" alt="Coast Logo">
+        <div class="overlay">Coast Logo</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Trimtab">
+        <img src="images/trimtab.jpg" alt="Trimtab">
+        <div class="overlay">Trimtab</div>
+      </div>
+      <div class="gallery-item" data-category="events" data-caption="Event Snapshot 1">
+        <img src="images-September-24/Image (1).jpeg" alt="Event Snapshot 1">
+        <div class="overlay">Event Snapshot 1</div>
+      </div>
+      <div class="gallery-item" data-category="events" data-caption="With Andrew">
+        <img src="images-September-24/Sloss-With-Andrew.jpeg" alt="With Andrew">
+        <div class="overlay">With Andrew</div>
+      </div>
+      <div class="gallery-item" data-category="events" data-caption="Really Far">
+        <img src="images-September-24/Sloss-ReallyFar.jpeg" alt="Really Far">
+        <div class="overlay">Really Far</div>
+      </div>
+      <div class="gallery-item" data-category="events" data-caption="Slosssssy">
+        <img src="images-September-24/Slosssssy.jpeg" alt="Slosssssy">
+        <div class="overlay">Slosssssy</div>
+      </div>
+      <div class="gallery-item" data-category="events" data-caption="Feeling It">
+        <img src="images-September-24/Sloss-FeelingIt.jpeg" alt="Feeling It">
+        <div class="overlay">Feeling It</div>
+      </div>
+      <div class="gallery-item" data-category="events" data-caption="July 4 Celebration">
+        <img src="images/July4.jpg" alt="July 4 Celebration">
+        <div class="overlay">July 4 Celebration</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Main Page Pic">
+        <img src="images/MainPagePic.jpg" alt="Main Page Pic">
+        <div class="overlay">Main Page Pic</div>
+      </div>
+      <div class="gallery-item" data-category="art" data-caption="Paper Doll Art">
+        <img src="images/PaperDoll.jpg" alt="Paper Doll Art">
+        <div class="overlay">Paper Doll Art</div>
+      </div>
+      <div class="gallery-item" data-category="events" data-caption="Ian DJ Blue">
+        <img src="images/IanDJBlue.jpg" alt="Ian DJ Blue">
+        <div class="overlay">Ian DJ Blue</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Land of Infinity">
+        <img src="images/LandOfInfinity.jpg" alt="Land of Infinity">
+        <div class="overlay">Land of Infinity</div>
+      </div>
+      <div class="gallery-item" data-category="misc" data-caption="Sound of Underground">
+        <img src="images/SoundOfUnderground.jpg" alt="Sound of Underground">
+        <div class="overlay">Sound of Underground</div>
+      </div>
+    </div>
+  </div>
 
-		<!-- Page Wrapper -->
-		<div id="page-wrapper">
-
-			<!-- Header -->
-			<header id="header">
-				<h1><a href="index.html">Coast</a></h1>
-				<nav id="nav">
-					<ul>
-						<li class="special">
-							<a href="#menu" class="menuToggle"><span>Menu</span></a>
-							<div id="menu">
-								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="generic.html">About</a></li>
-									<li><a href="elements.html">Pictures</a></li>
-									<!-- <li><a href="Contact.html">Contact</a></li> -->
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</nav>
-			</header>
-
-			<!-- Main -->
-			<article id="main">
-				<header>
-					<h2>Pictures</h2>
-				</header>
-				<section class="wrapper style5">
-					<div class="inner">
-						<section>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-4"><span class="image fit"><img src="images/May24Date.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/LogoNoBackground.png" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/trimtab.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images-September-24/Image (1).jpeg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images-September-24/Sloss-With-Andrew.jpeg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images-September-24/Sloss-ReallyFar.jpeg" alt="" /></span></div>									<div class="col-4"><span class="image fit"><img src="images-September-24/Slosssssy.jpeg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images-September-24/Sloss-FeelingIt.jpeg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/July4.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/MainPagePic.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/PaperDoll.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/IanDJBlue.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/LandOfInfinity.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/SoundOfUnderground.jpg" alt="" /></span></div>
-								</div>
-							</div>
-						</section>
-					</div>
-				</section>
-			</article>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-					<li><a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-					<li><a href="https://soundcloud.com/aninkle" class="icon brands fa-soundcloud" target="_blank"><span class="label">Dribbble</span></a></li>
-					<li><a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li> Fickling LLC &copy;</li><li>Designed By: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Two midgets in a trench coat</a></li>
-				</ul>
-			</footer>
-
-		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-	</body>
+  <footer>
+    <p>&copy; 2025 Coast Events</p>
+    <p>
+      <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank">Instagram</a> |
+      <a href="https://soundcloud.com/aninkle" target="_blank">Soundcloud</a> |
+      <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" target="_blank">Email</a>
+    </p>
+  </footer>
+  
+  <!-- Modal Lightbox -->
+  <div id="modal" class="modal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <div class="modal-content" id="modalContent">
+      <img src="" alt="Expanded View" id="modalImage">
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+  
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to top">&#8679;</button>
+  
+  <script>
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+      backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.getAttribute('data-filter');
+        galleryItems.forEach(item => {
+          item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
+        });
+      });
+    });
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+    const modalClose = document.getElementById('modalClose');
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        modalImage.src = img.src;
+        modalCaption.textContent = item.getAttribute('data-caption');
+        modal.style.display = 'flex';
+      });
+    });
+    modalClose.addEventListener('click', () => { modal.style.display = 'none'; });
+    window.addEventListener('click', (e) => { if (e.target === modal) { modal.style.display = 'none'; } });
+  </script>
+</body>
 </html>

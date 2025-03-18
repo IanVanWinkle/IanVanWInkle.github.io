@@ -1,0 +1,113 @@
+/* Header with Background */
+header.main-header {
+    position: relative;
+    height: 60vh;
+    background: url('images/MainPagePic.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  header.main-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .header-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .header-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  .header-content p {
+    font-size: 1.2em;
+  }
+  
+  /* Remove fixed container constraints for giglist page */
+  .container, .wrapper {
+    max-width: none;
+    margin: 0;
+    padding: 0 20px;
+  }
+  
+  /* Fully fluid container for events */
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Tabs styling (for toggling events) */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .tabs button {
+    background: #222;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .tabs button.active {
+    background: #f0f0f0;
+    color: #222;
+  }
+  
+  /* Events Section Styling */
+  .events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .event-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .event-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  .event-card h3 {
+    margin-bottom: 10px;
+  }
+  .event-card p {
+    margin: 5px 0;
+  }
+  
+  /* Extra styling for events sections */
+  .events-section {
+    margin: 40px 0;
+    padding: 20px 0;
+  }
+  .events-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+  }
+  
+  /* Footer Adjustments */
+  footer {
+    padding: 20px;
+    font-size: 0.9em;
+  }
+  
