@@ -57,12 +57,17 @@
     margin-left: 20px;
   }
   .nav-links a {
+    font-weight: bold;
+    padding: 10px 15px;
     color: #f0f0f0;
-    transition: color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+  
   .nav-links a:hover {
-    color: #ddd;
+    background-color: #f0f0f0;
+    color: #222;
   }
+  
   /* On small screens, allow horizontal scrolling */
   @media (max-width: 600px) {
     .nav-links {
@@ -70,6 +75,11 @@
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
+      .nav-links a {
+        display: inline-block;
+        padding: 15px 10px;  /* Increased padding for larger tap targets */
+        font-size: .8rem;   /* Slightly larger font size for readability */
+      }
   }
   
   /* Banner & Marquee (Index Page) */
@@ -419,7 +429,7 @@
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
-    padding: 270px 0; /* Adjust vertical padding as needed */
+    padding: 150px 0; /* Adjust vertical padding as needed */
   }
   
   /* Each button styled as a box with no background */
@@ -481,14 +491,22 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
     transform: translate(-50%, -50%);
-    object-fit: cover;
+    object-fit: contain;
     z-index: -1;
   }
+  
+  /* Mobile Adjustments */
+  @media (max-width: 600px) {
+    #bgVideo {
+      width: 100vw;  /* Ensures the video spans the full viewport width */
+      height: auto;  /* Auto-adjusts the height */
+      object-fit: contain;  /* Maintains the entire video in view */
+    }
+  }
+  
   
   
   
