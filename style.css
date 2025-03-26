@@ -57,6 +57,7 @@
     margin-left: 20px;
   }
   .nav-links a {
+<<<<<<< HEAD
     font-weight: bold;
     padding: 10px 15px;
     color: #f0f0f0;
@@ -68,6 +69,14 @@
     color: #222;
   }
   
+=======
+    color: #f0f0f0;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover {
+    color: #ddd;
+  }
+>>>>>>> 1c51888aa728195a6032b60de14133f0d974db28
   /* On small screens, allow horizontal scrolling */
   @media (max-width: 600px) {
     .nav-links {
@@ -75,11 +84,14 @@
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
+<<<<<<< HEAD
       .nav-links a {
         display: inline-block;
         padding: 15px 10px;  /* Increased padding for larger tap targets */
         font-size: .8rem;   /* Slightly larger font size for readability */
       }
+=======
+>>>>>>> 1c51888aa728195a6032b60de14133f0d974db28
   }
   
   /* Banner & Marquee (Index Page) */
@@ -429,7 +441,11 @@
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
+<<<<<<< HEAD
     padding: 130px 0; /* Adjust vertical padding as needed */
+=======
+    padding: 270px 0; /* Adjust vertical padding as needed */
+>>>>>>> 1c51888aa728195a6032b60de14133f0d974db28
   }
   
   /* Each button styled as a box with no background */
@@ -491,6 +507,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+<<<<<<< HEAD
     width: 100%;
     height: auto;
     transform: translate(-50%, -50%);
@@ -508,6 +525,17 @@
   }
   
   
+=======
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+>>>>>>> 1c51888aa728195a6032b60de14133f0d974db28
   
   
   
