@@ -134,28 +134,29 @@
   }
   
   /* Social Buttons in Banner */
-  /* Social Buttons in Banner */
 #banner .social-buttons {
   position: absolute;
-  bottom: 10px; /* Default bottom spacing for larger screens */
+  top: 100px;         /* Adjusts vertical position */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px; /* Space between buttons */
   justify-content: center;
+  align-items: center;
+  z-index: 2;           /* Ensures buttons appear above other content */
 }
 
-/* Social Button Base Style */
 #banner .social-buttons a.button {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
+  display: flex;        /* Center the icon within the button */
+  justify-content: center;
+  align-items: center;
+  width: 40px;          /* Fixed width */
+  height: 40px;         /* Fixed height */
+  margin: 0 5px;        /* Spacing between buttons */
+  padding: 0;           /* No internal padding */
   background: transparent;
   border-radius: 4px;
-  /* Removed fixed horizontal margins; gap in flex handles spacing */
 }
 
-/* Ensure icons fill the button container */
 #banner .social-buttons a.button img,
 #banner .social-buttons a.button i {
   width: 100%;
@@ -167,23 +168,23 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   #banner .social-buttons {
-    bottom: 15px; /* Slightly closer to bottom on smaller screens */
-    gap: 8px;
+    bottom: 15px;      /* Slightly lower offset on smaller screens */
   }
   #banner .social-buttons a.button {
     width: 35px;
     height: 35px;
+    margin: 0 4px;
   }
 }
 
 @media (max-width: 480px) {
   #banner .social-buttons {
-    bottom: 10px; /* Further reduce bottom offset for very small devices */
-    gap: 5px;
+    bottom: 10px;      /* Further adjust offset for very small screens */
   }
   #banner .social-buttons a.button {
     width: 30px;
     height: 30px;
+    margin: 0 3px;
   }
 }
 
