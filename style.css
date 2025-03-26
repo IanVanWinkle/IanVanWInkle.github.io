@@ -1,5 +1,7 @@
-/* Global Styles */
-* {
+/* ==========================================================================
+   Global Reset & Base Styles
+   ========================================================================== */
+   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -15,7 +17,10 @@
     text-decoration: none;
   }
   
-  /* Navigation – Always visible desktop nav */
+  /* ==========================================================================
+     Navigation
+     ========================================================================== */
+  /* Header & Navigation Container */
   header {
     background: #222;
     padding: 15px 20px;
@@ -29,6 +34,7 @@
     text-align: center;
   }
   
+  /* Responsive Navigation (Small screens) */
   @media (max-width: 600px) {
     .nav-container {
       flex-direction: column;
@@ -40,6 +46,8 @@
       padding: 10px 0;
     }
   }
+  
+  /* Logo & Navigation Links */
   .logo a {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
@@ -57,44 +65,33 @@
     margin-left: 20px;
   }
   .nav-links a {
-<<<<<<< HEAD
     font-weight: bold;
     padding: 10px 15px;
     color: #f0f0f0;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
-  
   .nav-links a:hover {
     background-color: #f0f0f0;
     color: #222;
   }
   
-=======
-    color: #f0f0f0;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover {
-    color: #ddd;
-  }
->>>>>>> 1c51888aa728195a6032b60de14133f0d974db28
-  /* On small screens, allow horizontal scrolling */
+  /* Navigation Links - Small screens (Horizontal scrolling) */
   @media (max-width: 600px) {
     .nav-links {
       overflow-x: auto;
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
-<<<<<<< HEAD
-      .nav-links a {
-        display: inline-block;
-        padding: 15px 10px;  /* Increased padding for larger tap targets */
-        font-size: .8rem;   /* Slightly larger font size for readability */
-      }
-=======
->>>>>>> 1c51888aa728195a6032b60de14133f0d974db28
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 10px;  /* Increased padding for larger tap targets */
+      font-size: .8rem;   /* Slightly larger font size for readability */
+    }
   }
   
-  /* Banner & Marquee (Index Page) */
+  /* ==========================================================================
+     Banner & Marquee
+     ========================================================================== */
   #banner {
     position: relative;
     background: #000;
@@ -107,6 +104,8 @@
     position: relative;
     z-index: 1;
   }
+  
+  /* Marquee Styles */
   .marquee {
     overflow: hidden;
     width: 100%;
@@ -127,15 +126,72 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
   }
-  .actions.special {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
+  
+  /* Duplicate Marquee Inner definition with longer animation duration */
+  .marquee__inner {
+    display: flex;
+    animation: marqueeAnimation 45s linear infinite;
   }
-  .actions.special li {
-    display: inline-block;
-    margin: 0 10px;
+  
+  /* Social Buttons in Banner */
+  /* Social Buttons in Banner */
+#banner .social-buttons {
+  position: absolute;
+  bottom: 10px; /* Default bottom spacing for larger screens */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center;
+}
+
+/* Social Button Base Style */
+#banner .social-buttons a.button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 4px;
+  /* Removed fixed horizontal margins; gap in flex handles spacing */
+}
+
+/* Ensure icons fill the button container */
+#banner .social-buttons a.button img,
+#banner .social-buttons a.button i {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #banner .social-buttons {
+    bottom: 15px; /* Slightly closer to bottom on smaller screens */
+    gap: 8px;
   }
+  #banner .social-buttons a.button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  #banner .social-buttons {
+    bottom: 10px; /* Further reduce bottom offset for very small devices */
+    gap: 5px;
+  }
+  #banner .social-buttons a.button {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+  
+  /* ==========================================================================
+     Buttons & Actions
+     ========================================================================== */
+  /* General Button Styles */
   .button {
     background: #f0f0f0;
     color: #222;
@@ -155,7 +211,48 @@
     background: #ddd;
   }
   
-  /* Fluid Container */
+  /* Special Action Buttons */
+  .actions.special {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  .actions.special li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  /* Stacked Actions */
+  .actions.stacked {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+  }
+  .actions.stacked li {
+    margin-bottom: 15px;
+  }
+  .actions.stacked li:last-child {
+    margin-bottom: 0;
+  }
+  .actions.stacked a.button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  /* Responsive adjustment for very small screens (Stacked Actions) */
+  @media (max-width: 600px) {
+    .actions.stacked li {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* ==========================================================================
+     Containers & Wrappers
+     ========================================================================== */
   .wrapper,
   .container {
     width: 100%;
@@ -163,7 +260,7 @@
     margin: 0 auto;
     padding: 0 20px;
   }
-  /* Optional: if you want ultrawide screens to be fluid, use this media query */
+  /* Optional: Full-width for ultrawide screens */
   @media (min-width: 1600px) {
     .wrapper,
     .container {
@@ -171,7 +268,7 @@
     }
   }
   
-  /* Wrapper Styles */
+  /* Wrapper Variations */
   .wrapper.style1 {
     background: #222;
     text-align: center;
@@ -184,6 +281,8 @@
     background: #222;
     text-align: center;
   }
+  
+  /* Major Section Headings */
   .major h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -193,7 +292,9 @@
     margin-bottom: 20px;
   }
   
-  /* Spotlight Sections */
+  /* ==========================================================================
+     Spotlight Sections
+     ========================================================================== */
   .spotlight {
     display: flex;
     flex-wrap: wrap;
@@ -217,18 +318,19 @@
   .spotlight:nth-child(2) {
     flex-direction: row-reverse;
   }
-  
-  /* CTA Buttons */
-  .actions.stacked {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
+  /* Spotlight Text Adjustments */
+  .spotlight .content h2 {
+    font-size: 2.5rem;  /* Adjust as needed for larger headings */
+    margin-bottom: 15px;
+  }
+  .spotlight .content p {
+    font-size: 1.5rem;  /* Increase the paragraph text size */
+    line-height: 1.4;
   }
   
-  /* Filter Bar (Pictures Page) */
+  /* ==========================================================================
+     Filter Bar (Pictures Page)
+     ========================================================================== */
   .filter-bar {
     text-align: center;
     margin: 40px 0 20px;
@@ -249,7 +351,9 @@
     color: #222;
   }
   
-  /* Gallery Grid (Pictures Page) */
+  /* ==========================================================================
+     Gallery Grid (Pictures Page)
+     ========================================================================== */
   .gallery-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -292,7 +396,9 @@
     opacity: 1;
   }
   
-  /* Modal Lightbox */
+  /* ==========================================================================
+     Modal Lightbox
+     ========================================================================== */
   .modal {
     display: none;
     position: fixed;
@@ -330,7 +436,9 @@
     cursor: pointer;
   }
   
-  /* Giglist (Events Page) Specific */
+  /* ==========================================================================
+     Giglist (Events Page) Specific
+     ========================================================================== */
   .tabs {
     display: flex;
     justify-content: center;
@@ -373,7 +481,9 @@
     margin: 5px 0;
   }
   
-  /* Footer */
+  /* ==========================================================================
+     Footer
+     ========================================================================== */
   footer {
     background: #222;
     text-align: center;
@@ -404,7 +514,9 @@
     color: #aaa;
   }
   
-  /* Back to Top Button */
+  /* ==========================================================================
+     Back to Top Button
+     ========================================================================== */
   #backToTop {
     position: fixed;
     bottom: 30px;
@@ -423,7 +535,10 @@
     background: #333;
   }
   
-  /* Responsive adjustments */
+  /* ==========================================================================
+     Responsive Adjustments
+     ========================================================================== */
+  /* Adjustments for Spotlight and Stacked Actions on smaller screens */
   @media (max-width: 768px) {
     .spotlight {
       flex-direction: column;
@@ -433,89 +548,21 @@
       align-items: center;
     }
   }
-/* Container for the social buttons positioned at the bottom of the banner */
-#banner .social-buttons {
-    position: absolute;
-    bottom: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-<<<<<<< HEAD
-    padding: 130px 0; /* Adjust vertical padding as needed */
-=======
-    padding: 270px 0; /* Adjust vertical padding as needed */
->>>>>>> 1c51888aa728195a6032b60de14133f0d974db28
-  }
   
-  /* Each button styled as a box with no background */
-  #banner .social-buttons a.button {
-    display: inline-block;
-    width: 40px;      /* Fixed width */
-    height: 40px;     /* Fixed height */
-    margin: 0 5px;    /* Horizontal spacing between buttons */
-    padding: 0;       /* Remove any internal padding */
-    background: transparent; /* No white background */
-    border-radius: 4px; /* Optional: slight rounding */
-  }
-  
-  /* Ensure images and icon fonts fill the container exactly */
-  #banner .social-buttons a.button img,
-  #banner .social-buttons a.button i {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-  /* Increase text size in the Spotlight (Pictures) section */
-.spotlight .content h2 {
-    font-size: 2.5rem;  /* Adjust as needed for larger headings */
-    margin-bottom: 15px;
-  }
-  
-  .spotlight .content p {
-    font-size: 1.5rem;  /* Increase the paragraph text size */
-    line-height: 1.4;
-  }
-  /* Ensure each button in the stacked actions list has some space */
-.actions.stacked li {
-    margin-bottom: 15px;
-  }
-  
-  .actions.stacked li:last-child {
-    margin-bottom: 0;
-  }
-  
-  /* Force the buttons to be block-level for full-width (or near-full) display with spacing */
-  .actions.stacked a.button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-  }
-  
-  /* Responsive adjustment for very small screens */
-  @media (max-width: 600px) {
-    .actions.stacked li {
-      margin-bottom: 20px;
-    }
-  }
-  .marquee__inner {
-    display: flex;
-    animation: marqueeAnimation 45s linear infinite;
-  }
+  /* ==========================================================================
+     Background Video (Banner)
+     ========================================================================== */
   #bgVideo {
     position: absolute;
     top: 50%;
     left: 50%;
-<<<<<<< HEAD
     width: 100%;
     height: auto;
     transform: translate(-50%, -50%);
     object-fit: contain;
     z-index: -1;
   }
-  
-  /* Mobile Adjustments */
+  /* Mobile Adjustments for Background Video */
   @media (max-width: 600px) {
     #bgVideo {
       width: 100vw;  /* Ensures the video spans the full viewport width */
@@ -523,19 +570,4 @@
       object-fit: contain;  /* Maintains the entire video in view */
     }
   }
-  
-  
-=======
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: -1;
-  }
-  
->>>>>>> 1c51888aa728195a6032b60de14133f0d974db28
-  
-  
   
