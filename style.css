@@ -92,40 +92,48 @@
   /* ==========================================================================
      Banner & Marquee
      ========================================================================== */
-  #banner {
-    position: relative;
-    background: #000;
-    height: 40vh;
-    padding: 100px 20px;
-    text-align: center;
-    overflow: hidden;
-  }
+     #banner {
+      position: relative;
+      background: #000;
+      height: 50vh;         /* Increased height from 40vh to 70vh */
+      padding: 30px 20px;    /* Reduced padding to reveal more of the video */
+      text-align: center;
+      overflow: hidden;
+    }
   #banner .inner {
     position: relative;
     z-index: 1;
   }
   
   /* Marquee Styles */
-  .marquee {
-    overflow: hidden;
-    width: 100%;
-  }
-  .marquee__inner {
-    display: flex;
-    animation: marqueeAnimation 15s linear infinite;
-  }
-  .marquee__group {
-    display: flex;
-  }
-  .marquee__text {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
-    padding-right: 2rem;
-  }
-  @keyframes marqueeAnimation {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
+  /* Marquee Styles */
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  padding-top: 130px; /* Added padding to lower the entire marquee */
+}
+
+.marquee__inner {
+  display: flex;
+  animation: marqueeAnimation 45s linear infinite;
+}
+
+.marquee__group {
+  display: flex;
+}
+
+.marquee__text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  padding-right: 2rem;
+  margin-top: 20px; /* Added margin to lower the text further */
+}
+
+@keyframes marqueeAnimation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
   
   /* Duplicate Marquee Inner definition with longer animation duration */
   .marquee__inner {
@@ -136,7 +144,7 @@
   /* Social Buttons in Banner */
 #banner .social-buttons {
   position: absolute;
-  top: 100px;         /* Adjusts vertical position */
+  top: 330px;         /* Adjusts vertical position */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
