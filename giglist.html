@@ -6,16 +6,13 @@
   <title>Coast - Gig List</title>
   <link rel="icon" type="image/x-icon" href="images/LogoNoBackground.png">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
         integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    /* Global Styles */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, sans-serif; background: #121212; color: #f0f0f0; line-height: 1.6; }
     a { color: inherit; text-decoration: none; }
-    /* Navigation */
     header { background: #222; padding: 15px 20px; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex;  justify-content: center; align-items: center; }
     .logo a { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: #f0f0f0; }
@@ -32,7 +29,6 @@
         -webkit-overflow-scrolling: touch;
       }
     }
-    /* Hero Section */
     .hero {
       background: url('images/MainPagePic.jpg') no-repeat center center/cover;
       height: 40vh;
@@ -61,13 +57,11 @@
     .hero-content p { 
       font-size: 19.2pt; 
     }
-    /* Main Content */
     .container { 
       max-width: 1200px; 
       margin: 40px auto; 
       padding: 0 20px; 
     }
-    /* Tabs for Gig List */
     .tabs { 
       display: flex; 
       justify-content: center; 
@@ -103,13 +97,8 @@
       transform: scale(1.02);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
-    .event-card h3 { 
-      margin-bottom: 10px; 
-    }
-    .event-card p { 
-      margin: 5px 0; 
-    }
-    /* Footer */
+    .event-card h3 { margin-bottom: 10px; }
+    .event-card p { margin: 5px 0; }
     footer { 
       background: #222; 
       text-align: center; 
@@ -123,23 +112,18 @@
       padding: 0; 
       margin-bottom: 10px; 
     }
-    footer .icons li { 
-      margin: 0 10px; 
-    }
+    footer .icons li { margin: 0 10px; }
     footer .icons a { 
       font-size: 1.5rem; 
       color: #f0f0f0; 
       transition: color 0.3s; 
     }
-    footer .icons a:hover { 
-      color: #ddd; 
-    }
+    footer .icons a:hover { color: #ddd; }
     footer .copyright { 
       list-style: none; 
       font-size: 0.9rem; 
       color: #aaa; 
     }
-    /* Back to Top Button */
     #backToTop { 
       position: fixed; 
       bottom: 30px; 
@@ -154,16 +138,12 @@
       display: none; 
       transition: background 0.3s; 
     }
-    #backToTop:hover { 
-      background: #333; 
-    }
+    #backToTop:hover { background: #333; }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
   <header>
     <div class="nav-container">
-      <!-- <div class="logo"><a href="index.html">Coast</a></div> -->
       <nav id="nav">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -176,39 +156,43 @@
       </nav>
     </div>
   </header>
-  
-  <!-- Hero Section -->
+
   <section class="hero">
     <div class="hero-content">
       <h1>Gigs</h1>
       <p>Explore past and future events with Coast</p>
     </div>
   </section>
-  
-  <!-- Main Content: Gig List with Tabs -->
+
   <div class="container">
     <div class="tabs">
       <button class="tab-button active" id="futureBtn">Future Events</button>
       <button class="tab-button" id="pastBtn">Past Events</button>
     </div>
-    
-    <!-- Future Events Section -->
+
     <div id="futureEvents" class="events">
       <div class="event-card">
-        <h3>Pilcrow</h3>
-        <p>Date: 4/5/2025</p>
-        <p>2015 1st Ave N, Birmingham, AL 35203-4101</p>
+        <h3>Adios Bar - TheSandlotRadio</h3>
+        <p>Date: 5/15/2025 at 7:30 PM</p>
       </div>
       <div class="event-card">
-        <h3>Elysian Gardens</h3>
-        <p>Date: 4/26/2025</p>
-        <p>101 40th St S, Birmingham, AL 35222</p>
+        <h3>Paperdoll POP - White Lotus Event</h3>
+        <p>Date: 5/17/2025 at 9:00 PM</p>
       </div>
-      <!-- Add additional future events as needed -->
     </div>
     
-    <!-- Past Events Section -->
     <div id="pastEvents" class="events" style="display:none;">
+      <div class="event-card">
+        <div class="event-card">
+          <h3>Pilcrow</h3>
+          <p>Date: 4/5/2025</p>
+          <p>2015 1st Ave N, Birmingham, AL 35203-4101</p>
+        </div>
+        <div class="event-card">
+          <h3>Elysian Gardens</h3>
+          <p>Date: 4/26/2025</p>
+          <p>101 40th St S, Birmingham, AL 35222</p>
+        </div>
       <div class="event-card">
         <h3>Adios with Sandlot Radio</h3>
         <p>Date: 3/20/2025</p>
@@ -234,37 +218,31 @@
         <p>Date: 12/31/2024</p>
         <p>Description: Bringing in the 2025 with a bang!</p>
       </div>
-      <!-- Add additional past events as needed -->
     </div>
   </div>
-  
-  <!-- Footer -->
+
   <footer>
     <p>
         <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank">Instagram</a> |
         <a href="https://soundcloud.com/aninkle" target="_blank">Soundcloud</a> |
         <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" target="_blank">Email</a>
-      </p>
+    </p>
     <ul class="copyright">
       <li>Fickling LLC &copy;</li>
-      <li>Designed By: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        Two midgets in a trench coat</a></li>
+      <li>Designed By: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Two midgets in a trench coat</a></li>
     </ul>
   </footer>
-  
-  <!-- Back to Top Button -->
+
   <button id="backToTop" title="Back to top">&#8679;</button>
-  
+
   <script>
-    // Responsive Menu Toggle
     const menuToggle = document.getElementById('menuToggle');
     menuToggle.addEventListener('click', function(e) {
       e.preventDefault();
       const navLinks = document.querySelector('.nav-links');
       navLinks.classList.toggle('active');
     });
-    
-    // Back to Top Button
+
     const backToTopButton = document.getElementById('backToTop');
     window.addEventListener('scroll', function() {
       backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
@@ -272,20 +250,19 @@
     backToTopButton.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    
-    // Tab functionality for toggling event views
+
     const futureBtn = document.getElementById('futureBtn');
     const pastBtn = document.getElementById('pastBtn');
     const futureEvents = document.getElementById('futureEvents');
     const pastEvents = document.getElementById('pastEvents');
-    
+
     futureBtn.addEventListener('click', function() {
       futureEvents.style.display = 'grid';
       pastEvents.style.display = 'none';
       futureBtn.classList.add('active');
       pastBtn.classList.remove('active');
     });
-    
+
     pastBtn.addEventListener('click', function() {
       futureEvents.style.display = 'none';
       pastEvents.style.display = 'grid';
