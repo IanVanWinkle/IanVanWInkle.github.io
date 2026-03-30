@@ -5,145 +5,172 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coast - About</title>
   <link rel="icon" type="image/x-icon" href="images/LogoNoBackground.png">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-        integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    /* Global Styles */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; background: #121212; color: #f0f0f0; line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-    /* Navigation */
-    header { background: #222; padding: 15px 20px; }
-    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; align-items: center; }
-    .logo a { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: #f0f0f0; }
-    nav { position: relative; }
-    .nav-links { list-style: none; display: flex; }
-    .nav-links li { margin-left: 20px; }
-    .nav-links a { color: #f0f0f0; transition: color 0.3s; }
-    .nav-links a:hover { color: #ddd; }
-    .menu-toggle { display: none; font-size: 1.5rem; color: #f0f0f0; cursor: pointer; }
-    @media (max-width: 600px) {
-      .nav-links {
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    }
-    /* Hero Section */
-    .hero {
-      background: url('images/MainPagePic.jpg') no-repeat center center/cover;
-      height: 40vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
-    .hero-content { position: relative; z-index: 1; }
-    .hero-content h1 { font-size: 3rem; margin-bottom: 10px; }
-    .hero-content p { font-size: 1.2rem; }
-    /* Main Content */
-    .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-    .container h2 { font-size: 2.5rem; margin-bottom: 20px; }
-    .container h3 { font-size: 2rem; margin: 20px 0 10px; }
-    .container h4 { font-size: 1.5rem; margin: 20px 0 10px; }
-    .container p { margin-bottom: 20px; }
-    .container ul { margin-left: 20px; margin-bottom: 20px; }
-    .container ul li { margin-bottom: 10px; }
-    hr { border: none; border-top: 1px solid #333; margin: 20px 0; }
-    /* Footer */
-    footer { background: #222; text-align: center; padding: 20px; margin-top: 40px; }
-    footer .icons { list-style: none; display: flex; justify-content: center; padding: 0; margin-bottom: 10px; }
-    footer .icons li { margin: 0 10px; }
-    footer .icons a { font-size: 1.5rem; color: #f0f0f0; transition: color 0.3s; }
-    footer .icons a:hover { color: #ddd; }
-    footer .copyright { list-style: none; font-size: 0.9rem; color: #aaa; }
-    /* Back to Top Button */
-    #backToTop { position: fixed; bottom: 30px; right: 30px; background: #222; color: #f0f0f0; border: none; padding: 10px 15px; border-radius: 50%; font-size: 1.2em; cursor: pointer; display: none; transition: background 0.3s; }
-    #backToTop:hover { background: #333; }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="page-transition"></div>
+  <div class="cursor-glow"></div>
+  <div class="noise-overlay"></div>
+
   <!-- Navigation -->
-  <header>
-    <div class="nav-container">
-      <!-- <div class="logo"><a href="index.html">Coast</a></div> -->
-      <nav id="nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="generic.html">About</a></li>
-          <li><a href="elements.html">Pictures</a></li>
-          <li><a href="giglist.html">Gig List</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-        </ul>
-        <a href="#" class="menu-toggle" id="menuToggle"><i class="fa fa-bars"></i></a>
-      </nav>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">COAST</a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generic.html">About</a></li>
+        <li><a href="elements.html">Gallery</a></li>
+        <li><a href="giglist.html">Gigs</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
     </div>
-  </header>
-  
-  <!-- Hero Section -->
-  <section class="hero">
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero hero-sub">
+    <div class="hero-bg">
+      <img src="images/MainPagePic.jpg" alt="Coast DJ">
+    </div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>About Me</h1>
-      <p>Your go-to DJ for unforgettable events and unique musical experiences.</p>
+      <div class="hero-badge reveal">The Story</div>
+      <h1 class="hero-title reveal">About Me</h1>
+      <p class="hero-subtitle reveal">Your go-to DJ for unforgettable events and unique musical experiences.</p>
     </div>
   </section>
-  
-  <!-- Main Content -->
-  <div class="container">
-    <h2>Welcome to My World of Music</h2>
-    <p>Hello! My name is Ian. Growing up in Birmingham, I was surrounded by soulful tunes that set the stage for my lifelong love affair with music. This love affair created Coast a Dj who specializes in all forms of music from House, Top 40’s, to a wide range of genres that will have you Coasting all day or all night long. There is nothing compared to being behind the Dj booth playing for music loves just like me. My taste provides for the main stage club, small private events to even weddings.</p>
-    <p>I’m ready to Coast… Are you?</p>
-    
-    <hr>
-    <h3>My Services</h3>
-    <p>Whether you're hosting an intimate gathering or throwing a full-blown festival, I bring a full suite of DJ services that are designed to make your event unforgettable. My offerings include:</p>
-    <ul>
-      <li>Custom-tailored playlists that perfectly capture your event's vibe</li>
-      <li>State-of-the-art sound and lighting setups for an immersive atmosphere</li>
-      <li>Engaging MC services to keep the energy high and the crowd laughing</li>
-      <li>Seamless mixing of diverse genres—from timeless classics to today's hottest hits</li>
-      <li>Real-time crowd reading to adjust the music flow on the fly</li>
-      <li>Interactive experiences, including live mashups, requests, and fun surprises</li>
-      <li>Event planning support to ensure every detail is pitch-perfect</li>
-    </ul>
-    <p>Let's create a night to remember—contact me, and let's start planning your next epic event!</p>
-  </div>
-  
+
+  <!-- Bio Section -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="about-content">
+        <div class="reveal">
+          <span class="section-label">Who I Am</span>
+          <h2 class="section-title" style="text-align:left;">Welcome to My World of Music</h2>
+          <div class="gradient-divider" style="margin-left:0;"></div>
+        </div>
+        <p class="about-text reveal">
+          Hello! My name is <strong>Ian</strong>. Growing up in Birmingham, I was surrounded by soulful tunes that set the stage for my lifelong love affair with music. This love affair created <strong>Coast</strong> &mdash; a DJ who specializes in all forms of music from House, Top 40's, to a wide range of genres that will have you Coasting all day or all night long.
+        </p>
+        <p class="about-text reveal">
+          There is nothing compared to being behind the DJ booth playing for music lovers just like me. My taste provides for the main stage club, small private events, and even weddings.
+        </p>
+        <p class="about-text reveal" style="font-size: 1.3rem; color: var(--text-primary); font-weight: 400; margin-top: 20px;">
+          I'm ready to Coast&hellip; Are you?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-label">What I Offer</span>
+        <h2 class="section-title">My Services</h2>
+        <div class="gradient-divider"></div>
+        <p class="section-subtitle">Whether you're hosting an intimate gathering or throwing a full-blown festival, I bring a full suite of DJ services designed to make your event unforgettable.</p>
+      </div>
+
+      <div class="services-grid stagger-children">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-music"></i></div>
+          <h3>Custom Playlists</h3>
+          <p>Tailored playlists that perfectly capture your event's vibe and keep the energy right.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Sound & Lighting</h3>
+          <p>State-of-the-art sound and lighting setups for a fully immersive atmosphere.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-microphone-alt"></i></div>
+          <h3>MC Services</h3>
+          <p>Engaging MC services to keep the energy high and the crowd hyped all night.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-random"></i></div>
+          <h3>Genre Blending</h3>
+          <p>Seamless mixing of diverse genres &mdash; from timeless classics to today's hottest hits.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <h3>Crowd Reading</h3>
+          <p>Real-time crowd reading to adjust the music flow on the fly and keep everyone moving.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Live Mashups</h3>
+          <p>Interactive experiences including live mashups, requests, and fun surprises.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3>Event Planning</h3>
+          <p>Event planning support to ensure every detail is pitch-perfect from start to finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="reveal">
+      <span class="section-label">Let's Go</span>
+      <h2 class="cta-title">Let's Create a Night to Remember</h2>
+      <p class="cta-subtitle">Contact me, and let's start planning your next epic event.</p>
+      <div class="btn-group">
+        <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Get In Touch
+        </a>
+        <a href="Contact.html" class="btn btn-outline">Contact Form</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer>
-    <p>
-      <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank">Instagram</a> |
-      <a href="https://soundcloud.com/aninkle" target="_blank">Soundcloud</a> |
-      <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" target="_blank">Email</a>
+  <footer class="site-footer">
+    <div class="visualizer" id="visualizer"></div>
+    <div class="footer-logo">COAST</div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://soundcloud.com/aninkle" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+      <a href="https://www.tiktok.com/@_itscoast_" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="generic.html">About</a>
+      <a href="elements.html">Gallery</a>
+      <a href="giglist.html">Gigs</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-credits">
+      Fickling LLC &copy; &mdash;
+      Designed by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Two midgets in a trench coat</a>
     </p>
-    <ul class="copyright">
-      <li>Fickling LLC &copy;</li>
-      <li>Designed By: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Two midgets in a trench coat</a></li>
-    </ul>
   </footer>
-  
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to top">&#8679;</button>
-  
+
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="shared.js"></script>
   <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      mobileMenu.classList.toggle('active');
-    });
-    const backToTopButton = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-      backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    backToTopButton.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    const visualizer = document.getElementById('visualizer');
+    for (let i = 0; i < 40; i++) {
+      const bar = document.createElement('div');
+      bar.className = 'visualizer-bar';
+      bar.style.setProperty('--max-height', (6 + Math.random() * 24) + 'px');
+      bar.style.setProperty('--duration', (0.6 + Math.random() * 1.2) + 's');
+      bar.style.animationDelay = (Math.random() * 2) + 's';
+      visualizer.appendChild(bar);
+    }
   </script>
 </body>
 </html>

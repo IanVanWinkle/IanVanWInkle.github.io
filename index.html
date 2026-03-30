@@ -1,188 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coast - Official Website</title>
-  <link rel="icon" type="image/x-icon" href="images/LogoNoBackground.png" />
-  <!-- Font Awesome and Google Font links -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-        integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/LogoNoBackground.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="landing">
+  <!-- Page Transition -->
+  <div class="page-transition"></div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
   <!-- Navigation -->
-  <header id="header" class="alt">
-    <div class="nav-container">
-      <!-- <h1 class="logo"><a href="index.html">Coast</a></h1> -->
-      <nav id="nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="generic.html">About</a></li>
-          <li><a href="elements.html">Pictures</a></li>
-          <li><a href="giglist.html">Gig List</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-        </ul>
-      </nav>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">COAST</a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generic.html">About</a></li>
+        <li><a href="elements.html">Gallery</a></li>
+        <li><a href="giglist.html">Gigs</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-  </header>
-  <!-- Banner with Marquee -->
-  <section id="banner">
-    <div class="inner">
-      <div class="marquee">
-        <div class="marquee__inner">
-          <div class="marquee__group">
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <video autoplay muted loop playsinline poster="images-March-25/fallback.jpg">
+        <source src="images-March-25/finalrevision.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">Birmingham, AL</div>
+      <h1 class="hero-title reveal">COAST</h1>
+      <p class="hero-subtitle reveal">Mixing beats, crafting memories, and living the music. From underground house to mainstream hits, every event is unforgettable.</p>
+      <div class="social-row reveal">
+        <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" class="social-btn" target="_blank" aria-label="Instagram">
+          <img src="images/icons/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://soundcloud.com/aninkle" class="social-btn" target="_blank" aria-label="SoundCloud">
+          <img src="images/icons/soundcloud.png" alt="SoundCloud">
+        </a>
+        <a href="https://www.tiktok.com/@_itscoast_" class="social-btn" target="_blank" aria-label="TikTok">
+          <img src="images/icons/tiktok.png" alt="TikTok">
+        </a>
+        <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" class="social-btn" aria-label="Email">
+          <img src="images/icons/gmail.png" alt="Email">
+        </a>
+      </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <span>COAST</span><span>COAST</span><span>COAST</span><span>COAST</span>
+        <span>COAST</span><span>COAST</span><span>COAST</span><span>COAST</span>
+        <span>COAST</span><span>COAST</span><span>COAST</span><span>COAST</span>
+        <span>COAST</span><span>COAST</span><span>COAST</span><span>COAST</span>
+        <span>COAST</span><span>COAST</span><span>COAST</span><span>COAST</span>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-indicator-line"></div>
+    </div>
+  </section>
+
+  <!-- Spotlight Section -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-label">What I Do</span>
+        <h2 class="section-title">The Experience</h2>
+        <div class="gradient-divider"></div>
+      </div>
+
+      <div class="spotlight-grid">
+        <!-- Live Performances -->
+        <div class="spotlight-item">
+          <div class="spotlight-image reveal-left">
+            <img src="./images/August192025Adios.jpg" alt="DJ in Action">
           </div>
-          <div class="marquee__group">
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
-            <span class="marquee__text">COAST</span>
+          <div class="spotlight-text reveal-right">
+            <div class="accent-line"></div>
+            <h2>Live Performances</h2>
+            <p>The house music is flowing, and you'll be coasting all night long. Every set is a journey through sound that keeps the crowd moving from start to finish.</p>
           </div>
         </div>
-        <video autoplay muted loop playsinline id="bgVideo" poster="images-March-25/fallback.jpg">
-          <source src="images-March-25/finalrevision.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-        </video>  
-      </div>
-      <!-- <ul class="actions special">
-        <li><a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" class="button primary">Bookings</a></li>
-      </ul> -->
-      <!-- Centered Social Media Buttons -->
-      <div class="social-buttons">
-        <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" class="button" target="_blank">
-          <img src="images/icons/instagram.png" alt="Instagram Icon" />
-        </a>
-        <a href="https://soundcloud.com/aninkle" class="button" target="_blank">
-          <img src="images/icons/soundcloud.png" alt="Soundcloud Icon" />
-        </a>
-        <a href="https://www.tiktok.com/@_itscoast_" class="button" target="_blank">
-          <img src="images/icons/tiktok.png" alt="TikTok Icon" />
-        </a>
-        <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" class="button" target="_blank">
-          <img src="images/icons/gmail.png" alt="Gmail Icon" />
-        </a>
-      </div>
-      
-    <!-- <a href="#one" class="more scrolly">Learn More</a> -->
-  </section>
-  
-  <!-- Section One: Introduction -->
-  <!-- <section id="one" class="wrapper style1 special">
-    <div class="inner">
-      <header class="major">
-        <h2>Mixing Beats, Crafting Memories,<br> and Living the Music</h2>
-        <p>Experience the ultimate sound journey with Coast. From underground beats to mainstream hits, every event is unforgettable.</p>
-      </header>
-    </div>
-  </section> -->
-  
-  <!-- Section Two: Spotlight on Performances -->
-  <section id="two" class="wrapper alt style2">
-    <div class="spotlight">
-      <div class="image"><img src="./images/August192025Adios.jpg" alt="DJ in Action" /></div>
-      <div class="content">
-        <h2>Live Performances</h2>
-        <p>The house music is flowing, and you'll be coasting all night long.</p>
-      </div>
-    </div>
-    <div class="spotlight">
-      <div class="image"><img src="images-March-25/adiosellowlight.jpeg" alt="Mixing Console" /></div>
-      <div class="content">
-        <h2>Studio Sessions<br>Creating Magic</h2>
-        <p>In the studio, sounds blend to craft tracks that move the soul.</p>
-      </div>
-    </div>
-    <div class="spotlight">
-      <div class="image"><img src="images-March-25/frontpagesmiling.jpeg" alt="Crowd Enjoying Music" /></div>
-      <div class="content">
-        <h2>Events & Parties<br>Soundtrack of Your Night</h2>
-        <p>Your event becomes a groove-filled journey with Coast at the helm.</p>
+
+        <!-- Studio Sessions -->
+        <div class="spotlight-item">
+          <div class="spotlight-image reveal-right">
+            <img src="images-March-25/adiosellowlight.jpeg" alt="Mixing Console">
+          </div>
+          <div class="spotlight-text reveal-left">
+            <div class="accent-line"></div>
+            <h2>Studio Sessions</h2>
+            <p>In the studio, sounds blend to craft tracks that move the soul. Creating magic one beat at a time with passion and precision.</p>
+          </div>
+        </div>
+
+        <!-- Events & Parties -->
+        <div class="spotlight-item">
+          <div class="spotlight-image reveal-left">
+            <img src="images-March-25/frontpagesmiling.jpeg" alt="Crowd Enjoying Music">
+          </div>
+          <div class="spotlight-text reveal-right">
+            <div class="accent-line"></div>
+            <h2>Events & Parties</h2>
+            <p>Your event becomes a groove-filled journey with Coast at the helm. From intimate gatherings to full-blown festivals, the soundtrack of your night starts here.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
-  <!-- Section Three: Bookings & Inquiries (CTA) -->
-  <section id="three" class="wrapper style3 special">
-    <div class="inner">
-      <header class="major">
-        <h2>Bookings & Inquiries</h2>
-        <p>Ready to make your event a night to remember? Let's create a groovin' experience.</p>
-      </header>
-      <ul class="features">
-          <h3>Book Now</h3>
-          <p>Contact me to book your next event. Availability fills up quickly!</p>
-        </li>
-      </ul>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="reveal">
+      <span class="section-label">Ready?</span>
+      <h2 class="cta-title">Let's Make It Unforgettable</h2>
+      <p class="cta-subtitle">Book Coast for your next event. Availability fills up fast.</p>
+      <div class="btn-group">
+        <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Book Now
+        </a>
+        <a href="generic.html" class="btn btn-outline">Learn More</a>
+      </div>
     </div>
   </section>
-  
-  <!-- Call To Action -->
-  <section id="cta" class="wrapper style4">
-    <div class="inner">
-      <header>
-        <h2>Questions or Inquiries?</h2>
-      </header>
-      <ul class="actions stacked">
-        <li><a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" class="button fit primary">Bookings</a></li>
-        <li><a href="generic.html" class="button fit">Learn More</a></li>
-      </ul>
-    </div>
-  </section>
-  
+
   <!-- Footer -->
-  <footer>
-    <p>
-      <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank">Instagram</a> |
-      <a href="https://soundcloud.com/aninkle" target="_blank">Soundcloud</a> |
-      <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" target="_blank">Email</a>
+  <footer class="site-footer">
+    <div class="visualizer" id="visualizer"></div>
+    <div class="footer-logo">COAST</div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://soundcloud.com/aninkle" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+      <a href="https://www.tiktok.com/@_itscoast_" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="generic.html">About</a>
+      <a href="elements.html">Gallery</a>
+      <a href="giglist.html">Gigs</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-credits">
+      Fickling LLC &copy; &mdash;
+      Designed by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Two midgets in a trench coat</a>
     </p>
-    <ul class="copyright">
-      <li>Fickling LLC &copy;</li>
-      <li>Designed By: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        Two midgets in a trench coat</a></li>
   </footer>
-  
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to top">&#8679;</button>
-  
+
+  <!-- Back to Top -->
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="shared.js"></script>
   <script>
-    const backToTopButton = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-      backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    backToTopButton.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    // Generate visualizer bars
+    const visualizer = document.getElementById('visualizer');
+    for (let i = 0; i < 40; i++) {
+      const bar = document.createElement('div');
+      bar.className = 'visualizer-bar';
+      const maxH = 6 + Math.random() * 24;
+      const dur = 0.6 + Math.random() * 1.2;
+      bar.style.setProperty('--max-height', maxH + 'px');
+      bar.style.setProperty('--duration', dur + 's');
+      bar.style.animationDelay = (Math.random() * 2) + 's';
+      visualizer.appendChild(bar);
+    }
   </script>
 </body>
 </html>

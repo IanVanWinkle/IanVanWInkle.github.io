@@ -5,191 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coast - Contact</title>
   <link rel="icon" type="image/x-icon" href="images/LogoNoBackground.png">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-        integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    /* Global Styles */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background: #121212; color: #f0f0f0; line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-    /* Navigation */
-    header {
-      background: #222;
-      padding: 15px 20px;
-    }
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .logo a {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      color: #f0f0f0;
-    }
-    nav { position: relative; }
-    .nav-links { list-style: none; display: flex; }
-    .nav-links li { margin-left: 20px; }
-    .nav-links a { color: #f0f0f0; transition: color 0.3s; }
-    .nav-links a:hover { color: #ddd; }
-    @media (max-width: 600px) {
-      .nav-links { overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
-    }
-    /* Hero Section */
-    .hero {
-      background: url('images/MainPagePic.jpg') no-repeat center center/cover;
-      height: 40vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
-    .hero-content { position: relative; z-index: 1; }
-    .hero-content h1 { font-size: 3rem; margin-bottom: 10px; }
-    .hero-content p { font-size: 1.2rem; }
-    /* Form Section */
-    .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-    form { background: #1e1e1e; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
-    form .form-group { margin-bottom: 20px; }
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #333;
-      border-radius: 4px;
-      background: #121212;
-      color: #f0f0f0;
-      transition: border 0.3s;
-    }
-    form input[type="text"]:focus,
-    form input[type="email"]:focus,
-    form textarea:focus { border-color: #f0f0f0; outline: none; }
-    form textarea { resize: vertical; }
-    form input[type="submit"] {
-      background: #f0f0f0;
-      color: #222;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s;
-    }
-    form input[type="submit"]:hover { background: #ddd; }
-    /* Footer */
-    footer {
-      background: #222;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    footer .icons {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin-bottom: 10px;
-    }
-    footer .icons li { margin: 0 10px; }
-    footer .icons a { font-size: 1.5rem; color: #f0f0f0; transition: color 0.3s; }
-    footer .icons a:hover { color: #ddd; }
-    footer .copyright { list-style: none; font-size: 0.9rem; color: #aaa; }
-    /* Back to Top Button */
-    #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #222;
-      color: #f0f0f0;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 1.2em;
-      cursor: pointer;
-      display: none;
-      transition: background 0.3s;
-    }
-    #backToTop:hover { background: #333; }
-    @media (max-width: 600px) {
-      .nav-links { overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="page-transition"></div>
+  <div class="cursor-glow"></div>
+  <div class="noise-overlay"></div>
+
   <!-- Navigation -->
-  <header>
-    <div class="nav-container">
-      <!-- <div class="logo"><a href="index.html">Coast</a></div> -->
-      <nav id="nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="generic.html">About</a></li>
-          <li><a href="elements.html">Pictures</a></li>
-          <li><a href="giglist.html">Gig List</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-        </ul>
-      </nav>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">COAST</a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generic.html">About</a></li>
+        <li><a href="elements.html">Gallery</a></li>
+        <li><a href="giglist.html">Gigs</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
     </div>
-  </header>
-  
-  <!-- Hero Section -->
-  <section class="hero">
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero hero-sub">
+    <div class="hero-bg">
+      <img src="images-March-25/coastbluebackground.jpeg" alt="Coast DJ">
+    </div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Contact Me</h1>
-      <p>Fill in the form below to get in touch.</p>
+      <div class="hero-badge reveal">Let's Talk</div>
+      <h1 class="hero-title reveal">Contact</h1>
+      <p class="hero-subtitle reveal">Have a question or want to book? Drop me a line.</p>
     </div>
   </section>
-  
-  <!-- Main Contact Form Section -->
-  <div class="container">
-    <form method="post" action="#">
-      <div class="form-group">
-        <input type="text" name="name" id="name" placeholder="Name" required>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="section-inner" style="max-width: 700px;">
+      <div class="section-header reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Send a Message</h2>
+        <div class="gradient-divider"></div>
       </div>
-      <div class="form-group">
-        <input type="email" name="email" id="email" placeholder="Email" required>
+
+      <form class="contact-form reveal" method="post" action="#">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" class="form-input" rows="6" placeholder="Tell me about your event..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+
+      <div class="text-center mt-4 reveal">
+        <p style="color: var(--text-secondary); margin-bottom: 12px;">Or reach out directly:</p>
+        <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> itscoastmusic@gmail.com
+        </a>
       </div>
-      <div class="form-group">
-        <textarea name="message" id="message" placeholder="Enter your message" rows="6" required></textarea>
+
+      <div class="social-row mt-4 reveal" style="justify-content: center;">
+        <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" class="social-btn" target="_blank" aria-label="Instagram">
+          <img src="images/icons/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://soundcloud.com/aninkle" class="social-btn" target="_blank" aria-label="SoundCloud">
+          <img src="images/icons/soundcloud.png" alt="SoundCloud">
+        </a>
+        <a href="https://www.tiktok.com/@_itscoast_" class="social-btn" target="_blank" aria-label="TikTok">
+          <img src="images/icons/tiktok.png" alt="TikTok">
+        </a>
       </div>
-      <div class="form-group">
-        <input type="submit" value="Send Message">
-      </div>
-    </form>
-  </div>
-  
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer>
-      <p>
-        <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank">Instagram</a> |
-        <a href="https://soundcloud.com/aninkle" target="_blank">Soundcloud</a> |
-        <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" target="_blank">Email</a>
-      </p>
-      <ul class="copyright">
-        <li>Fickling LLC &copy;</li>
-        <li>Designed By: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-          Two midgets in a trench coat</a></li>
+  <footer class="site-footer">
+    <div class="visualizer" id="visualizer"></div>
+    <div class="footer-logo">COAST</div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://soundcloud.com/aninkle" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+      <a href="https://www.tiktok.com/@_itscoast_" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="generic.html">About</a>
+      <a href="elements.html">Gallery</a>
+      <a href="giglist.html">Gigs</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-credits">
+      Fickling LLC &copy; &mdash;
+      Designed by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Two midgets in a trench coat</a>
+    </p>
   </footer>
-  
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to top">&#8679;</button>
-  
+
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="shared.js"></script>
   <script>
-    const backToTopButton = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-      backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    backToTopButton.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    // Visualizer
+    const visualizer = document.getElementById('visualizer');
+    for (let i = 0; i < 40; i++) {
+      const bar = document.createElement('div');
+      bar.className = 'visualizer-bar';
+      bar.style.setProperty('--max-height', (6 + Math.random() * 24) + 'px');
+      bar.style.setProperty('--duration', (0.6 + Math.random() * 1.2) + 's');
+      bar.style.animationDelay = (Math.random() * 2) + 's';
+      visualizer.appendChild(bar);
+    }
   </script>
 </body>
 </html>

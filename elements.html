@@ -1,208 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coast - Pictures</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coast - Gallery</title>
   <link rel="icon" type="image/x-icon" href="images/LogoNoBackground.png">
-  <!-- Font Awesome & Google Font -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-        integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-tva+1H59uNQXRqAypHmltOa+1E5WTIVtMfeWjP6N+VqFTF3HwFPmxRNtKO1XDJD0SbqX4Lxv2lZb2p3b/GT+cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="page-transition"></div>
+  <div class="cursor-glow"></div>
+  <div class="noise-overlay"></div>
+
   <!-- Navigation -->
-  <header>
-    <div class="nav-container">
-      <!-- <div class="logo"><a href="index.html">Coast</a></div> -->
-      <nav id="nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="generic.html">About</a></li>
-          <li><a href="elements.html">Pictures</a></li>
-          <li><a href="giglist.html">Gig List</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-        </ul>
-      </nav>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">COAST</a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="generic.html">About</a></li>
+        <li><a href="elements.html">Gallery</a></li>
+        <li><a href="giglist.html">Gigs</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
     </div>
-  </header>
-  
-  <!-- Filter Bar -->
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="events">Events</button>
-    <button class="filter-btn" data-filter="logo">Logo</button>
-    <button class="filter-btn" data-filter="art">Art</button>
-    <button class="filter-btn" data-filter="misc">Misc</button>
-  </div>
-  
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero hero-sub">
+    <div class="hero-bg">
+      <img src="images-March-25/courtyardstage.jpeg" alt="Coast DJ">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">Moments</div>
+      <h1 class="hero-title reveal">Gallery</h1>
+      <p class="hero-subtitle reveal">Snapshots from shows, studios, and everything in between.</p>
+    </div>
+  </section>
+
   <!-- Gallery Section -->
-  <div class="gallery-container">
-    <div class="gallery-grid">
-      <!-- Existing Gallery Items -->
-	  <div class="gallery-item" data-category="misc" data-caption="Adios Duo">
-        <img src="images-March-25/adiosduo.jpeg" alt="Adios Duo">
-        <div class="overlay">Adios Duo</div>
+  <section class="section">
+    <div class="section-inner">
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="logo">Logo</button>
+        <button class="filter-btn" data-filter="art">Art</button>
+        <button class="filter-btn" data-filter="misc">Misc</button>
       </div>
-      <div class="gallery-item" data-category="misc" data-caption="Adios Yellow Light">
-        <img src="images-March-25/adiosellowlight.jpeg" alt="Adios Yellow Light">
-        <div class="overlay">Adios Yellow Light</div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid stagger-children" id="galleryGrid">
+        <div class="gallery-item reveal" data-category="misc" data-caption="Adios Duo">
+          <img src="images-March-25/adiosduo.jpeg" alt="Adios Duo" loading="lazy">
+          <div class="overlay">
+            <span>Adios Duo</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Adios Yellow Light">
+          <img src="images-March-25/adiosellowlight.jpeg" alt="Adios Yellow Light" loading="lazy">
+          <div class="overlay">
+            <span>Adios Yellow Light</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Coast and Hack">
+          <img src="images-March-25/coastandhack.jpeg" alt="Coast and Hack" loading="lazy">
+          <div class="overlay">
+            <span>Coast and Hack</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Coast Blue Background">
+          <img src="images-March-25/coastbluebackground.jpeg" alt="Coast Blue Background" loading="lazy">
+          <div class="overlay">
+            <span>Coast Blue Background</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Courtyard Stage">
+          <img src="images-March-25/courtyardstage.jpeg" alt="Courtyard Stage" loading="lazy">
+          <div class="overlay">
+            <span>Courtyard Stage</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Front Page Smiling">
+          <img src="images-March-25/frontpagesmiling.jpeg" alt="Front Page Smiling" loading="lazy">
+          <div class="overlay">
+            <span>Front Page Smiling</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Hasta Abajo">
+          <img src="images-March-25/hastaabajo.jpeg" alt="Hasta Abajo" loading="lazy">
+          <div class="overlay">
+            <span>Hasta Abajo</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Sandlot Radio">
+          <img src="images-March-25/sandlotradio.jpeg" alt="Sandlot Radio" loading="lazy">
+          <div class="overlay">
+            <span>Sandlot Radio</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Vintage Market 3-23">
+          <img src="images-March-25/vintagemarket3-23.jpeg" alt="Vintage Market 3-23" loading="lazy">
+          <div class="overlay">
+            <span>Vintage Market 3-23</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="events" data-caption="May 24 Event">
+          <img src="images/May24Date.jpg" alt="May 24 Event" loading="lazy">
+          <div class="overlay">
+            <span>May 24 Event</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="logo" data-caption="Coast Logo">
+          <img src="images/LogoNoBackground.png" alt="Coast Logo" loading="lazy">
+          <div class="overlay">
+            <span>Coast Logo</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Trimtab">
+          <img src="images/trimtab.jpg" alt="Trimtab" loading="lazy">
+          <div class="overlay">
+            <span>Trimtab</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="events" data-caption="Event Snapshot">
+          <img src="images-September-24/Image (1).jpeg" alt="Event Snapshot" loading="lazy">
+          <div class="overlay">
+            <span>Event Snapshot</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="events" data-caption="With Andrew">
+          <img src="images-September-24/Sloss-With-Andrew.jpeg" alt="With Andrew" loading="lazy">
+          <div class="overlay">
+            <span>With Andrew</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="events" data-caption="Sloss Festival">
+          <img src="images-September-24/Sloss-ReallyFar.jpeg" alt="Sloss Festival" loading="lazy">
+          <div class="overlay">
+            <span>Sloss Festival</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="events" data-caption="Slosssssy">
+          <img src="images-September-24/Slosssssy.jpeg" alt="Slosssssy" loading="lazy">
+          <div class="overlay">
+            <span>Slosssssy</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="events" data-caption="Feeling It">
+          <img src="images-September-24/Sloss-FeelingIt.jpeg" alt="Feeling It" loading="lazy">
+          <div class="overlay">
+            <span>Feeling It</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="events" data-caption="July 4 Celebration">
+          <img src="images/July4.jpg" alt="July 4 Celebration" loading="lazy">
+          <div class="overlay">
+            <span>July 4 Celebration</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Main Page">
+          <img src="images/MainPagePic.jpg" alt="Main Page" loading="lazy">
+          <div class="overlay">
+            <span>Main Page</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="art" data-caption="Paper Doll Art">
+          <img src="images/PaperDoll.jpg" alt="Paper Doll Art" loading="lazy">
+          <div class="overlay">
+            <span>Paper Doll Art</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="events" data-caption="Ian DJ Blue">
+          <img src="images/IanDJBlue.jpg" alt="Ian DJ Blue" loading="lazy">
+          <div class="overlay">
+            <span>Ian DJ Blue</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Land of Infinity">
+          <img src="images/LandOfInfinity.jpg" alt="Land of Infinity" loading="lazy">
+          <div class="overlay">
+            <span>Land of Infinity</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-category="misc" data-caption="Sound of Underground">
+          <img src="images/SoundOfUnderground.jpg" alt="Sound of Underground" loading="lazy">
+          <div class="overlay">
+            <span>Sound of Underground</span>
+            <div class="overlay-icon"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
       </div>
-      <div class="gallery-item" data-category="misc" data-caption="Coast and Hack">
-        <img src="images-March-25/coastandhack.jpeg" alt="Coast and Hack">
-        <div class="overlay">Coast and Hack</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Coast Blue Background">
-        <img src="images-March-25/coastbluebackground.jpeg" alt="Coast Blue Background">
-        <div class="overlay">Coast Blue Background</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Courtyard Stage">
-        <img src="images-March-25/courtyardstage.jpeg" alt="Courtyard Stage">
-        <div class="overlay">Courtyard Stage</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Front Page Smiling">
-        <img src="images-March-25/frontpagesmiling.jpeg" alt="Front Page Smiling">
-        <div class="overlay">Front Page Smiling</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Hasta Abajo">
-        <img src="images-March-25/hastaabajo.jpeg" alt="Hasta Abajo">
-        <div class="overlay">Hasta Abajo</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Sandlot Radio">
-        <img src="images-March-25/sandlotradio.jpeg" alt="Sandlot Radio">
-        <div class="overlay">Sandlot Radio</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Vintage Market 3-23">
-        <img src="images-March-25/vintagemarket3-23.jpeg" alt="Vintage Market 3-23">
-        <div class="overlay">Vintage Market 3-23</div>
-      </div>
-      <div class="gallery-item" data-category="events" data-caption="May 24 Event">
-        <img src="images/May24Date.jpg" alt="May 24 Event">
-        <div class="overlay">May 24 Event</div>
-      </div>
-      <div class="gallery-item" data-category="logo" data-caption="Coast Logo">
-        <img src="images/LogoNoBackground.png" alt="Coast Logo">
-        <div class="overlay">Coast Logo</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Trimtab">
-        <img src="images/trimtab.jpg" alt="Trimtab">
-        <div class="overlay">Trimtab</div>
-      </div>
-      <div class="gallery-item" data-category="events" data-caption="Event Snapshot 1">
-        <img src="images-September-24/Image (1).jpeg" alt="Event Snapshot 1">
-        <div class="overlay">Event Snapshot 1</div>
-      </div>
-      <div class="gallery-item" data-category="events" data-caption="With Andrew">
-        <img src="images-September-24/Sloss-With-Andrew.jpeg" alt="With Andrew">
-        <div class="overlay">With Andrew</div>
-      </div>
-      <div class="gallery-item" data-category="events" data-caption="Really Far">
-        <img src="images-September-24/Sloss-ReallyFar.jpeg" alt="Really Far">
-        <div class="overlay">Really Far</div>
-      </div>
-      <div class="gallery-item" data-category="events" data-caption="Slosssssy">
-        <img src="images-September-24/Slosssssy.jpeg" alt="Slosssssy">
-        <div class="overlay">Slosssssy</div>
-      </div>
-      <div class="gallery-item" data-category="events" data-caption="Feeling It">
-        <img src="images-September-24/Sloss-FeelingIt.jpeg" alt="Feeling It">
-        <div class="overlay">Feeling It</div>
-      </div>
-      <div class="gallery-item" data-category="events" data-caption="July 4 Celebration">
-        <img src="images/July4.jpg" alt="July 4 Celebration">
-        <div class="overlay">July 4 Celebration</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Main Page Pic">
-        <img src="images/MainPagePic.jpg" alt="Main Page Pic">
-        <div class="overlay">Main Page Pic</div>
-      </div>
-      <div class="gallery-item" data-category="art" data-caption="Paper Doll Art">
-        <img src="images/PaperDoll.jpg" alt="Paper Doll Art">
-        <div class="overlay">Paper Doll Art</div>
-      </div>
-      <div class="gallery-item" data-category="events" data-caption="Ian DJ Blue">
-        <img src="images/IanDJBlue.jpg" alt="Ian DJ Blue">
-        <div class="overlay">Ian DJ Blue</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Land of Infinity">
-        <img src="images/LandOfInfinity.jpg" alt="Land of Infinity">
-        <div class="overlay">Land of Infinity</div>
-      </div>
-      <div class="gallery-item" data-category="misc" data-caption="Sound of Underground">
-        <img src="images/SoundOfUnderground.jpg" alt="Sound of Underground">
-        <div class="overlay">Sound of Underground</div>
-      </div>
-      
-      <!-- New Gallery Items (images-March-25) -->
-      
     </div>
+  </section>
+
+  <!-- Modal Lightbox -->
+  <div class="modal-overlay" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <button class="modal-nav modal-prev" id="modalPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button class="modal-nav modal-next" id="modalNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    <div class="modal-image-wrap">
+      <img src="" alt="Expanded View" id="modalImage">
+    </div>
+    <div class="modal-caption" id="modalCaption"></div>
   </div>
 
-  <footer>
-	  <p>
-		<a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank">Instagram</a> |
-		<a href="https://soundcloud.com/aninkle" target="_blank">Soundcloud</a> |
-		<a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" target="_blank">Email</a>
-	  </p>
-	  <ul class="copyright">
-		<li>Fickling LLC &copy;</li>
-		<li>Designed By: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-		  Two midgets in a trench coat</a></li>
-  </footer>
-  
-  <!-- Modal Lightbox -->
-  <div id="modal" class="modal">
-    <span class="modal-close" id="modalClose">&times;</span>
-    <div class="modal-content" id="modalContent">
-      <img src="" alt="Expanded View" id="modalImage">
-      <div class="modal-caption" id="modalCaption"></div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="visualizer" id="visualizer"></div>
+    <div class="footer-logo">COAST</div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/_itscoast_?igsh=ZGxqZDl2bGh4dGU4" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://soundcloud.com/aninkle" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+      <a href="https://www.tiktok.com/@_itscoast_" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="mailto:itscoastmusic@gmail.com?subject=Booking%20Opportunity" aria-label="Email"><i class="fas fa-envelope"></i></a>
     </div>
-  </div>
-  
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to top">&#8679;</button>
-  
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="generic.html">About</a>
+      <a href="elements.html">Gallery</a>
+      <a href="giglist.html">Gigs</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-credits">
+      Fickling LLC &copy; &mdash;
+      Designed by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Two midgets in a trench coat</a>
+    </p>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="shared.js"></script>
   <script>
-    const backToTopButton = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-      backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    backToTopButton.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    // Visualizer
+    const visualizer = document.getElementById('visualizer');
+    for (let i = 0; i < 40; i++) {
+      const bar = document.createElement('div');
+      bar.className = 'visualizer-bar';
+      bar.style.setProperty('--max-height', (6 + Math.random() * 24) + 'px');
+      bar.style.setProperty('--duration', (0.6 + Math.random() * 1.2) + 's');
+      bar.style.animationDelay = (Math.random() * 2) + 's';
+      visualizer.appendChild(bar);
+    }
+
+    // Gallery Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
-    
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        const filter = button.getAttribute('data-filter');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
         galleryItems.forEach(item => {
-          item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
+          const match = filter === 'all' || item.dataset.category === filter;
+          item.classList.toggle('hidden', !match);
         });
       });
     });
-    
+
+    // Modal Lightbox
     const modal = document.getElementById('modal');
     const modalImage = document.getElementById('modalImage');
     const modalCaption = document.getElementById('modalCaption');
     const modalClose = document.getElementById('modalClose');
-    
+    const modalPrev = document.getElementById('modalPrev');
+    const modalNext = document.getElementById('modalNext');
+    let currentIndex = -1;
+
+    function getVisibleItems() {
+      return [...galleryItems].filter(item => !item.classList.contains('hidden'));
+    }
+
+    function openModal(index) {
+      const items = getVisibleItems();
+      if (index < 0 || index >= items.length) return;
+      currentIndex = index;
+      const item = items[index];
+      modalImage.src = item.querySelector('img').src;
+      modalCaption.textContent = item.dataset.caption;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
     galleryItems.forEach(item => {
       item.addEventListener('click', () => {
-        const img = item.querySelector('img');
-        modalImage.src = img.src;
-        modalCaption.textContent = item.getAttribute('data-caption');
-        modal.style.display = 'flex';
+        const items = getVisibleItems();
+        const index = items.indexOf(item);
+        openModal(index);
       });
     });
-    
-    modalClose.addEventListener('click', () => { modal.style.display = 'none'; });
-    window.addEventListener('click', (e) => { if (e.target === modal) { modal.style.display = 'none'; } });
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+    modalPrev.addEventListener('click', e => {
+      e.stopPropagation();
+      const items = getVisibleItems();
+      openModal((currentIndex - 1 + items.length) % items.length);
+    });
+
+    modalNext.addEventListener('click', e => {
+      e.stopPropagation();
+      const items = getVisibleItems();
+      openModal((currentIndex + 1) % items.length);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') modalPrev.click();
+      if (e.key === 'ArrowRight') modalNext.click();
+    });
   </script>
 </body>
 </html>
